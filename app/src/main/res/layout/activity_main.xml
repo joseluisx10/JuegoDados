@@ -9,15 +9,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout" >
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="72dp"
+            android:layout_height="83dp"
+            android:src="@drawable/baseline_menu" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DadoPlay"
+            android:textAlignment="center"
+            android:textColor="#FAF5F5"
+            android:textSize="24sp"
+            android:translationY="20dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        android:background="#3F51B5"
+        android:background="#0C86E8"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,14 +46,27 @@
         app:layout_constraintVertical_bias="0.0">
 
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:fontFamily="cursive"
+            android:text="Username"
+            android:textAlignment="textEnd"
+            android:textColor="#F7F8EF"
+            android:textSize="24sp"
+            android:translationX="20dp"
+            android:translationY="20dp" />
+
         <ImageView
             android:id="@+id/img1"
             android:layout_width="82dp"
             android:layout_height="82dp"
             android:background="#3F51B5"
             android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
+            android:translationX="160dp"
+            android:translationY="50dp" />
 
         <ImageView
             android:id="@+id/img2"
@@ -42,8 +74,8 @@
             android:layout_height="82dp"
             android:background="#3F51B5"
             android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
+            android:translationX="160dp"
+            android:translationY="50dp" />
 
         <ImageView
             android:id="@+id/img3"
@@ -51,8 +83,8 @@
             android:layout_height="82dp"
             android:background="#3F51B5"
             android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
+            android:translationX="160dp"
+            android:translationY="50dp" />
 
         <ImageView
             android:id="@+id/img4"
@@ -60,8 +92,8 @@
             android:layout_height="82dp"
             android:background="#3F51B5"
             android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
+            android:translationX="160dp"
+            android:translationY="50dp" />
 
         <ImageView
             android:id="@+id/img5"
@@ -69,17 +101,8 @@
             android:layout_height="82dp"
             android:background="#3F51B5"
             android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
-
-        <ImageView
-            android:id="@+id/img6"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
-            android:background="#3F51B5"
-            android:src="@drawable/dado1"
-            android:translationX="150dp"
-            android:translationY="20dp" />
+            android:translationX="160dp"
+            android:translationY="50dp" />
 
         <Button
             android:id="@+id/button3"
@@ -90,6 +113,7 @@
             android:translationY="100dp" />
 
     </LinearLayout>
+
 
 
 
