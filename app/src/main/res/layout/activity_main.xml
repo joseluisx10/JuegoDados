@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="67dp"
         android:background="#3F51B5"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout" >
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -45,19 +45,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:autoText="false"
-            android:fontFamily="cursive"
-            android:text="Username"
-            android:textAlignment="textEnd"
-            android:textColor="#F7F8EF"
-            android:textSize="24sp"
-            android:translationX="20dp"
-            android:translationY="20dp" />
 
         <ImageView
             android:id="@+id/img1"
@@ -113,8 +100,6 @@
             android:translationY="100dp" />
 
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

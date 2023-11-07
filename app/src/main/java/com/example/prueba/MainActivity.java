@@ -9,6 +9,7 @@ import android.service.autofill.FieldClassification;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -25,15 +26,24 @@ public class MainActivity extends AppCompatActivity {
         ImageView dado3 = findViewById(R.id.img3);
         ImageView dado4 = findViewById(R.id.img4);
         ImageView dado5 = findViewById(R.id.img5);
+        LinearLayout ll = findViewById(R.id.linearLayout);
+        TextView username;
+
+        {
+            username = new TextView(ll.getContext());
+        }
+
+        ll.addView(username);
 
         pulsar.setOnClickListener(new View.OnClickListener() {
 
-            private TextView txtUserName = findViewById(R.id.textView2);
+
             private Integer[] imagenesID = new Integer[]{R.drawable.dado1, R.drawable.dado2, R.drawable.dado3, R.drawable.dado4, R.drawable.dado5};
             @Override
             public void onClick(View view) {
 
-                txtUserName.setText("User name: Matias");
+                username.setText("User name: Matias");
+                username.setTextColor(getResources().getColor(R.color.white));
 
                 Random r = new Random();
 
