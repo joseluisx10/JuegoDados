@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "511548997689",
+    "project_id": "proyecto-integrador-b058b",
+    "storage_bucket": "proyecto-integrador-b058b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511548997689:android:2d06a10d2e576fe0514de8",
+        "android_client_info": {
+          "package_name": "com.example.prueba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFT6OT3RG1MoQH95txx5b2ghqja18ugr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
