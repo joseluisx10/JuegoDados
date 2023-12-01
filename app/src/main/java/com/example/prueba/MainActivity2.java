@@ -42,6 +42,11 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
+    public void cocktailApi(View v){
+        Intent intent = new Intent(getApplicationContext(), MainActivityConection.class);
+        startActivity(intent);
+    }
+
 
 
 

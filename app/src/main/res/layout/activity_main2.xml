@@ -13,6 +13,14 @@
         android:background="#3F51B5"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout">
 
+        <Button
+            android:id="@+id/btncocktail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="cocktailApi"
+            android:layout_weight="1"
+            android:text="Cocktail" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
