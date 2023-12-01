@@ -3,6 +3,8 @@ package com.example.prueba;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -38,12 +40,13 @@ public class CocktailGlass extends AsyncTask<String, Integer, String> {
         try {
             response = run(url);
             ObjectMapper objectMapper = new ObjectMapper();
-            DataApi respuesta = objectMapper.readValue(response, DataApi.class);
-            response = respuesta.drinks.get(0).strDrink;
+            DataApi res = objectMapper.readValue(response, DataApi.class);
+
+            response = res.drinks.get(0).strDrink;
             //List<Character> cocktel = respuesta.results;
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return response;
     }
