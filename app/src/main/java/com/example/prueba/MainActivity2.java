@@ -22,7 +22,6 @@ public class MainActivity2 extends AppCompatActivity {
         TextView label = findViewById(R.id.txtemail);
         Intent result = this.getIntent();
         if(result.hasExtra("email")){
-
             String email = this.getIntent().getStringExtra("email");
             Log.i("TAG", "recibimos: " + email);
             label.setText(email);
