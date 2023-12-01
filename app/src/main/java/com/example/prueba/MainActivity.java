@@ -22,8 +22,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-
-
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                username.setText("User name: Matias");
+                username.setText(email);
                 username.setTextColor(getResources().getColor(R.color.white));
 
                 Random r = new Random();
@@ -81,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-        downloadOnClick(dado1, dado2, dado3, dado4, dado5);
     }
 
     @Override
@@ -91,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if(currentUser != null){
-            String email = currentUser.getEmail();
+            email = currentUser.getEmail();
             Log.i("firebase email", email);
         } else {
             Log.i("firebase", "NO hay usuario");
@@ -100,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
         }
+    }
+
+    public void setImg(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+        if(email != null)
+        {
+            intent.putExtra("email", email);
+        }
+        startActivity(intent);
     }
 
     public void LogoutOnClick(View v){
@@ -118,25 +125,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-    public void downloadOnClick(ImageView dado1, ImageView dado2, ImageView dado3, ImageView dado4, ImageView dado5)
-    {
-
-        GetImg descarga1 = new GetImg(dado1);
-        GetImg descarga2 = new GetImg(dado2);
-        GetImg descarga3 = new GetImg(dado3);
-        GetImg descarga4 = new GetImg(dado4);
-        GetImg descarga5 = new GetImg(dado5);
-        descarga1.execute("https://www.dadovirtual.site/img/dados/cara11.png");
-        descarga2.execute("https://p7.hiclipart.com/preview/707/718/498/shake-dice-dice-game-cute-red-dice.jpg");
-        descarga3.execute("https://mysuenos.com/wp-content/uploads/dados-numero-3.jpg");
-        descarga4.execute("https://www.shutterstock.com/image-illustration/red-dice-number-4-260nw-249476653.jpg");
-        descarga5.execute("https://mediateca.educa.madrid.org/imagen.php?id=qvy1u3pbzmwf3tu9&m=0&ext=.jpg");
-
-    }
-
-
-
-
 
 }
