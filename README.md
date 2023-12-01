@@ -12,6 +12,7 @@ Proceso en Desarro
 -Conexión a una  base de datos
 -Descarga de imagen 
 
+**OPERACIONES BASICAS**
 
 En esta pantalla el usuarios debe ingresar el Nombre de Usuario y Clave, luego debe presionar el botón Submit para ingresar tal como se muestra en la figura siguiente, 
 
