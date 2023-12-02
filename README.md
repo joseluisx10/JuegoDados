@@ -1,4 +1,4 @@
-# parcial-1-am-acn4a-leguizamon-quispe
+# parcial-2-am-acn4a-leguizamon-quispe
 #JUEGO DE DADOS GENERALA
 Desarrollo de  una  aplicación  de juego de dados, desarrollado con android java.
 Contiene:
