@@ -13,36 +13,17 @@
         android:background="#3F51B5"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout">
 
-        <Button
-            android:id="@+id/btncocktail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:onClick="cocktailApi"
-            android:text="Cocktail" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_weight="1"
             android:text="DadoPlay"
             android:textAlignment="center"
             android:textColor="#FAF5F5"
             android:textSize="24sp"
             />
-
-        <Button
-            android:id="@+id/btn_returnjuego"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:onClick="returnJuegoOnClick"
-            android:text="Seguir jugando" />
 
     </LinearLayout>
 
@@ -65,19 +46,42 @@
             android:id="@+id/txtemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
             android:text="TextView"
-            android:textColor="#F44336"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
-            android:onClick="downloadOnClick"
-            android:text="Ver reglas del juego"
-            android:translationX="200dp"
-            android:translationY="5dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btncocktail"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:onClick="cocktailApi"
+                android:text="Ver Cocktail" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="downloadOnClick"
+                android:text="Ver Reglas" />
+
+            <Button
+                android:id="@+id/btn_returnjuego"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:onClick="returnJuegoOnClick"
+                android:text="Seguir jugando" />
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/img"
@@ -85,7 +89,7 @@
             android:layout_height="650dp"
             android:background="#3F51B5"
             android:translationX="0dp"
-            android:translationY="10dp" />
+            />
 
     </LinearLayout>
 
