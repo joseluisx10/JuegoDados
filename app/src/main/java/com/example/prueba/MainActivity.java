@@ -16,13 +16,19 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     private String email;
+
+    private String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +91,43 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart(){
         super.onStart();
+        TextView textUSer = findViewById(R.id.textUser);
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if(currentUser != null){
+            uid = currentUser.getUid();
             email = currentUser.getEmail();
+            boolean verificado = currentUser.isEmailVerified();
             Log.i("firebase email", email);
+            String mensaje = "Email: " + email;
+            if (verificado){
+                this.db.collection("users")
+                        .whereEqualTo("uid", uid)
+                        .get()
+                        .addOnCompleteListener(
+                                new OnCompleteListener<QuerySnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                        if(task.isSuccessful()){
+                                            for(QueryDocumentSnapshot document : task.getResult()){
+                                                String id = document.getId();
+                                                db
+                                                        .collection("users")
+                                                        .document(id)
+                                                        .update("verificado", true);
+                                                Log.d("TAG", id + " => " + document.getData());
+                                            }
+                                        }
+                                    }
+                                }
+                        );
+
+            }else{
+                mensaje += "\n y necesita ser verificado.";
+                //metodo para enviar un link para verificacion
+                currentUser.sendEmailVerification();
+            }
+            textUSer.setText(mensaje);
         } else {
             Log.i("firebase", "NO hay usuario");
 
