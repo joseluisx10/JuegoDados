@@ -26,14 +26,39 @@ public class MainActivityConection extends AppCompatActivity {
         ImageView[] foto = new ImageView[10];
         //Async Task
         LinearLayout linearLayout = findViewById(R.id.body);
+        // Iteramos sobre los elementos
         for (int i = 0; i < titulo.length; i++) {
-            titulo[i] = new TextView(linearLayout.getContext());
-            linearLayout.addView(titulo[i]);
-        }
+            LinearLayout itemLayout = new LinearLayout(linearLayout.getContext());
+            itemLayout.setOrientation(LinearLayout.HORIZONTAL);
+            itemLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
 
-        for (int i = 0; i < foto.length; i++) {
-            foto[i] = new ImageView(linearLayout.getContext());
-            linearLayout.addView(foto[i]);
+            titulo[i] = new TextView(itemLayout.getContext());
+            foto[i] = new ImageView(itemLayout.getContext());
+
+            // Configuramos el TextView
+            titulo[i].setLayoutParams(new LinearLayout.LayoutParams(
+                    0,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    1 // Peso para ocupar el máximo espacio disponible
+            ));
+            titulo[i].setTextSize(18);
+            titulo[i].setPadding(16, 16, 16, 16);
+
+            // Configuramos el ImageView
+            foto[i].setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            ));
+            foto[i].setPadding(16, 16, 16, 16);
+
+            itemLayout.addView(titulo[i]);
+            itemLayout.addView(foto[i]);
+
+            // Añadimos el LinearLayout horizontal al LinearLayout principal
+            linearLayout.addView(itemLayout);
         }
         checkConnection(titulo, foto);
         Log.i("cantidad", ": "+ titulo.length);

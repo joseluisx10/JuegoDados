@@ -24,7 +24,7 @@ public class MainActivity2 extends AppCompatActivity {
         if(result.hasExtra("email")){
             String email = this.getIntent().getStringExtra("email");
             Log.i("TAG", "recibimos: " + email);
-            label.setText(email);
+            label.setText("Email: " + email);
         }
     }
 
