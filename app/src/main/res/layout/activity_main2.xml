@@ -17,10 +17,10 @@
             android:id="@+id/btncocktail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="12dp"
-            android:onClick="cocktailApi"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
+            android:onClick="cocktailApi"
             android:text="Cocktail" />
 
         <TextView

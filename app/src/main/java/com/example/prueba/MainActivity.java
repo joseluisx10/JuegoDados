@@ -147,6 +147,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickData(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(), DataActivity.class);
+        startActivity(intent);
+    }
+
     public void LogoutOnClick(View v){
 
         /*mAuth.getCurrentUser().()

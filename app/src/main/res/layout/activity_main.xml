@@ -73,7 +73,7 @@
                 android:layout_width="159dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:onClick="setImg"
+                android:onClick="onClickData"
                 android:text="Mis datos" />
 
             <Button

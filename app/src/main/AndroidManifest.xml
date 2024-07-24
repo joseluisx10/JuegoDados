@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Prueba"
         tools:targetApi="31">
         <activity
+            android:name=".DataActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivityConection"
             android:exported="false" />
         <activity
@@ -33,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
