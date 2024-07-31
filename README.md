@@ -6,11 +6,11 @@ Desarrollo de una aplicación de juego de dados "Generala", desarrollada en Andr
 
 ## Contenido
 
-- [Login](#1-login)
+- [Login (Firebase Authentication)](#1-login)
 - [Mesa de Dados](#2-mesa-de-dados-menú-principal)
-- [Perfil de Usuario](#3-perfil-de-usuario)
+- [Perfil de Usuario (Firestore database)](#3-perfil-de-usuario)
 - [Reglas del Juego](#4-reglas-del-juego)
-- [Lista de Cócteles](#5-lista-de-cócteles)
+- [Lista de Cócteles (TheCocktailDB API para la lista de cócteles)](#5-lista-de-cócteles)
 
 ## Operaciones Básicas
 
@@ -44,5 +44,17 @@ Para ingresar, debe presionar el botón "Ver Cocktail" desde la pantalla de regl
 
 ![Lista de Cócteles](https://github.com/user-attachments/assets/12000ac7-0cb0-4c81-9624-c9348546385d)
 
+## Instalación y Configuración
 
+1. Clonar el repositorio:
+
+   ```sh
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio
+
+   Abrir el proyecto en Android Studio.
+
+2. Configurar Firebase Authentication y Firestore Database siguiendo la documentación oficial.
+
+3. Ejecutar la aplicación en un dispositivo o emulador Android.
 
