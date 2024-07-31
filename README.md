@@ -49,7 +49,7 @@ Para ingresar, debe presionar el botón "Ver Cocktail" desde la pantalla de regl
 1. Clonar el repositorio:
 
    ```sh
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/joseluisx10/final-am-acn4a-leguizamon-quispe.git)
+   git clone https://github.com/joseluisx10/final-am-acn4a-leguizamon-quispe.git
    cd final-am-acn4a-leguizamon-quispe
 
    Abrir el proyecto en Android Studio.
