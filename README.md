@@ -54,7 +54,7 @@ Para ingresar, debe presionar el botón "Ver Cocktail" desde la pantalla de regl
 
    Abrir el proyecto en Android Studio.
 
-2. Configurar Firebase Authentication y Firestore Database siguiendo la documentación oficial. (Descargar: google-services.json)
+2. Configurar Firebase Authentication y Firestore Database siguiendo la documentación oficial. (Descargar: "google-services.json" desde su cuenta)
 
 3. Ejecutar la aplicación en un dispositivo o emulador Android.
 
